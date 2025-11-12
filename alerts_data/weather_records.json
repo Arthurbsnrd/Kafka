@@ -1,0 +1,110 @@
+{
+  "max_temp": [
+    {
+      "city": null,
+      "date": null,
+      "max_temp": NaN
+    },
+    {
+      "city": "Berlin",
+      "date": "2025-11-12",
+      "max_temp": 22.1
+    },
+    {
+      "city": "Lisbonne",
+      "date": "2025-11-12",
+      "max_temp": 20.0
+    },
+    {
+      "city": "Lyon",
+      "date": "2025-11-12",
+      "max_temp": 19.4
+    },
+    {
+      "city": "Paris",
+      "date": "2025-11-12",
+      "max_temp": 24.0
+    }
+  ],
+  "min_temp": [
+    {
+      "city": null,
+      "date": null,
+      "min_temp": NaN
+    },
+    {
+      "city": "Berlin",
+      "date": "2025-11-12",
+      "min_temp": 16.8
+    },
+    {
+      "city": "Lisbonne",
+      "date": "2025-11-12",
+      "min_temp": 10.1
+    },
+    {
+      "city": "Lyon",
+      "date": "2025-11-12",
+      "min_temp": 12.1
+    },
+    {
+      "city": "Paris",
+      "date": "2025-11-12",
+      "min_temp": 14.2
+    }
+  ],
+  "max_wind": [
+    {
+      "city": null,
+      "event_time": null,
+      "windspeed": NaN
+    },
+    {
+      "city": "Berlin",
+      "event_time": "2025-11-12T09:20:00",
+      "windspeed": 10.4
+    },
+    {
+      "city": "Lisbonne",
+      "event_time": "2025-11-12T09:20:00",
+      "windspeed": 12.1
+    },
+    {
+      "city": "Lyon",
+      "event_time": "2025-11-12T09:05:00",
+      "windspeed": 9.2
+    },
+    {
+      "city": "Paris",
+      "event_time": "2025-11-12T09:00:00",
+      "windspeed": 7.1
+    }
+  ],
+  "max_precip": [
+    {
+      "city": null,
+      "date": null,
+      "total_precip": NaN
+    },
+    {
+      "city": "Berlin",
+      "date": "2025-11-12",
+      "total_precip": NaN
+    },
+    {
+      "city": "Lisbonne",
+      "date": "2025-11-12",
+      "total_precip": NaN
+    },
+    {
+      "city": "Lyon",
+      "date": "2025-11-12",
+      "total_precip": NaN
+    },
+    {
+      "city": "Paris",
+      "date": "2025-11-12",
+      "total_precip": NaN
+    }
+  ]
+}

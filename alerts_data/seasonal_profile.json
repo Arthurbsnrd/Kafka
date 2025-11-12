@@ -1,0 +1,42 @@
+[
+  {
+    "country": null,
+    "city": null,
+    "month": NaN,
+    "temperature_month_avg": NaN,
+    "windspeed_month_avg": NaN,
+    "alert_probability": 0.0
+  },
+  {
+    "country": "France",
+    "city": "Lyon",
+    "month": 11.0,
+    "temperature_month_avg": 15.719999999999999,
+    "windspeed_month_avg": 7.260000000000001,
+    "alert_probability": 0.6
+  },
+  {
+    "country": "Germany",
+    "city": "Berlin",
+    "month": 11.0,
+    "temperature_month_avg": 19.48,
+    "windspeed_month_avg": 6.9799999999999995,
+    "alert_probability": 0.8
+  },
+  {
+    "country": "France",
+    "city": "Paris",
+    "month": 11.0,
+    "temperature_month_avg": 19.66,
+    "windspeed_month_avg": 4.839999999999999,
+    "alert_probability": 0.6
+  },
+  {
+    "country": "Portugal",
+    "city": "Lisbonne",
+    "month": 11.0,
+    "temperature_month_avg": 14.680000000000001,
+    "windspeed_month_avg": 9.58,
+    "alert_probability": 0.8
+  }
+]

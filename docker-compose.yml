@@ -68,7 +68,6 @@ services:
 
   spark-worker:
     image: bde2020/spark-worker:3.0.1-hadoop3.2
-
     depends_on:
       - spark-master
     environment:
@@ -93,53 +92,28 @@ services:
         --packages org.apache.spark:spark-sql-kafka-0-10_2.12:3.0.1,org.apache.kafka:kafka-clients:2.6.0
         pyspark-shell
 
-
-
   kafka:
     image: wurstmeister/kafka
     container_name: kafka
     ports:
       - "9092:9092"
+      - "29092:29092"
     environment:
       KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
-      KAFKA_LISTENERS: PLAINTEXT://0.0.0.0:9092
-      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka:9092
-      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT
+      KAFKA_LISTENERS: PLAINTEXT://0.0.0.0:9092,PLAINTEXT_HOST://0.0.0.0:29092
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka:9092,PLAINTEXT_HOST://localhost:29092
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT,PLAINTEXT_HOST:PLAINTEXT
       KAFKA_INTER_BROKER_LISTENER_NAME: PLAINTEXT
       KAFKA_CREATE_TOPICS: "weather_stream:1:1,weather_current:1:1,weather_transformed:1:1"
       KAFKA_LOG_RETENTION_BYTES: 1073741824
     depends_on:
       - zookeeper
-  
 
   zookeeper:
     image: wurstmeister/zookeeper
     container_name: zookeeper
     ports:
       - "2181:2181"
-
-
-#   hive-metastore:
-#     image: apache/hive:4.0.0
-#     container_name: hive-metastore
-#     ports:
-#       - "9083:9083"
-#     environment:
-#       - SERVICE_NAME=metastore
-#     command: >
-#       bash -c "hive --service metastore"
-
-#   hive-server:
-#     image: apache/hive:4.0.0
-#     container_name: hive-server
-#     ports:
-#       - "10000:10000"
-#       - "10002:10002"
-#     environment:
-#       - SERVICE_NAME=hiveserver2
-#       - HIVE_SITE_CONF=/opt/hive/conf
-#     command: >
-#       bash -c "hive --service hiveserver2 --hiveconf hive.metastore.uris=thrift://hive-metastore:9083"
 
 volumes:
   hadoop_namenode:
